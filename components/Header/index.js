@@ -8,10 +8,12 @@
 //    <span class="temp">98°</span>
 //  </div >
 // And add it to the DOM in the .header-container component
+window.addEventListener('load', (e) =>{
+
 
 function Header() {
 
-    const headerContainer = document.querySelector('.header-container')[0];
+
     const header = document.createElement ('div');
     const headerDate = document.createElement ('span');
     const headerTitle = document.createElement ('h1');
@@ -22,9 +24,9 @@ function Header() {
     header.appendChild(headerTitle);
     header.appendChild(headerTemp);
 
-    headerDate.textContent = ${date};
-    headerTitle.textContent = ${title};
-    headerTemp.textContent = ${temp};
+    headerDate.textContent = `${date}`;
+    headerTitle.textContent = `${title}`;
+    headerTemp.textContent = `${temp}`;
 
     header.classList.add('header');
     headerDate.classList.add('date');
@@ -32,9 +34,7 @@ function Header() {
 
     return header;
 
+}//closes the header
 
-
-
-
-
-}
+    const headerContainer = document.querySelector('.header-container');
+});//closes the window load
