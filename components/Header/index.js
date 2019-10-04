@@ -19,14 +19,13 @@ function Header() {
     const headerTitle = document.createElement ('h1');
     const headerTemp = document.createElement ('span');
 
-    headerContainer.appendChild(header);
     header.appendChild(headerDate);
     header.appendChild(headerTitle);
     header.appendChild(headerTemp);
 
-    headerDate.textContent = `${date}`;
-    headerTitle.textContent = `${title}`;
-    headerTemp.textContent = `${temp}`;
+    headerDate.textContent = `SMARCH 28, 2019`;
+    headerTitle.textContent = `Lambda Times`;
+    headerTemp.textContent = `98°`;
 
     header.classList.add('header');
     headerDate.classList.add('date');
@@ -37,4 +36,6 @@ function Header() {
 }//closes the header
 
     const headerContainer = document.querySelector('.header-container');
+    let menu = new Header();
+    headerContainer.appendChild(menu);
 });//closes the window load

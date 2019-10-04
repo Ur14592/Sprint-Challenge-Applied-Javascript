@@ -27,6 +27,8 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     console.log(axiosData);
     cardMaker(axiosData.data.articles);
 });//ends axiosdata
+
+
 const cardMaker = ((obj) => {
     for(let key in obj ) {
         obj[key].forEach((article) =>
@@ -48,10 +50,12 @@ const createArt = ((data) =>{
     author.appendChild(imgContainer);
     author.appendChild(authorsName);
     imgContainer.appendChild(img);
+    
 
     headline.textContent = data.headline;
-    authorsName.textContent = `by: ${data.authorsName}`;
+    authorsName.textContent = `by: ${data.authorName}`;
     img.src = data.authorPhoto;
+    
     card.classList.add('card');
     headline.classList.add('headline');
     author.classList.add('author');
